@@ -1,0 +1,108 @@
+/* Home Section Wrapper */
+.home-section {
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  margin: 0 12px 12px 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+/* Flex container for AddNote + Notes section */
+.home-panels {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Left + Right panels */
+.home-left,
+.home-right {
+  width: 50%;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  padding: 12px;
+  height: 26rem;
+}
+
+.home-left {
+  margin-right: 12px;
+}
+
+.home-right {
+  overflow-y: auto;
+}
+
+/* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
+
+/* Tablets (Below 768px) */
+@media (max-width: 768px) {
+  .home-panels {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+    margin-right: 0;
+    height: auto;
+    padding: 12px;
+  }
+  .home-right {
+    width: 100%;
+    margin-right: 0;
+    height: 40rem;
+    padding: 12px;
+  }
+
+  .home-right {
+    max-height: 40rem;
+  }
+
+  h1,
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Screens (Below 576px) */
+@media (max-width: 576px) {
+  .home-section {
+    margin: 0 6px 12px 6px;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .home-right {
+    max-height: 40rem;
+  }
+}
+
+/* Very small screens (Below 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+
+  .home-left,
+  .home-right {
+    padding: 8px;
+  }
+  .home-right {
+    max-height: 40rem;
+  }
+}

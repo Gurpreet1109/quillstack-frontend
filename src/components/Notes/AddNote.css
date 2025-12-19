@@ -1,0 +1,108 @@
+/* REMOVE BORDERS IN DARK THEME */
+.dark-theme .form-floating > .form-control {
+  background-color: #2b2b2b !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Floating label color */
+.dark-theme .form-floating > label {
+  color: #bbbbbb !important;
+}
+
+/* When the label floats after typing */
+.dark-theme .form-floating > .form-control:focus ~ label,
+.dark-theme .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: white !important;
+}
+
+/* Remove focus border outline */
+.dark-theme .form-control:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* AddNote Form Container */
+.addnote-form {
+  width: 98%;
+  margin: auto auto 12px auto;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Floating label input containers for Title & Tag */
+.addnote-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addnote-input {
+  width: 49.5%;
+}
+
+/* ---------------- Responsive Breakpoints ---------------- */
+
+/* Large Tablets (Below 992px) */
+@media (max-width: 992px) {
+  .addnote-form {
+    width: 95%;
+  }
+}
+
+/* Tablets & Medium Screens (Below 768px) */
+@media (max-width: 768px) {
+  .addnote-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .addnote-input {
+    width: 100%;
+  }
+
+  #descriptionInput {
+    height: 150px !important;
+  }
+}
+
+/* Mobile Screens (Below 576px) */
+@media (max-width: 576px) {
+  .addnote-form {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #descriptionInput {
+    height: 140px !important;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* Very Small Screens (Below 400px) */
+@media (max-width: 400px) {
+  .addnote-form {
+    padding: 8px;
+  }
+
+  #descriptionInput {
+    height: 130px !important;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  textarea {
+    font-size: 13px;
+  }
+}
