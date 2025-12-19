@@ -10,7 +10,7 @@ import Notes from "./components/Notes/Notes.jsx";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
 import "./App.css";
-import Alert from "./components/Alert/Alert.jsx"
+import Alert from "./components/Alert/Alert.jsx";
 
 function App() {
   return (
@@ -19,6 +19,8 @@ function App() {
         <Navbar />
         <Alert message="This is alert" />
         <Routes>
+          <Route path="/" element={<h1>QuillStack Works!</h1>} />
+          <Route path="/login" element={<h1>Login Page</h1>} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
