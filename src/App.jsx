@@ -13,7 +13,7 @@ import "./App.css";
 import Alert from "./components/Alert/Alert.jsx"
 
 function App() {
-  return (
+  return (  
     <>
       <NoteState>
         <Navbar />

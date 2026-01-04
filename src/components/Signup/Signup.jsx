@@ -19,7 +19,7 @@ const Signup = () => {
     const { name, email, phone, password } = credentials;
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/createuser", {
+      const response = await fetch("https://quillstack-backend.onrender.com/api/auth/createuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
