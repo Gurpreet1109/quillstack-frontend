@@ -2,7 +2,7 @@ import { useState } from "react";
 import NoteContext from "./noteContext.jsx";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000";
+  const host = "https://quillstack-backend.onrender.com";
   const [notes, setNotes] = useState([]);
 
   // Helper function to get token
