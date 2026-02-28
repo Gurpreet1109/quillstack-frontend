@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const Signup = (props) => {
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -41,6 +41,7 @@ const Signup = () => {
       console.error(err);
       setError("Internal Server Error");
     }
+     props.showAlert("Signup successful!", "success");
   };
 
   const onChange = (e) => {

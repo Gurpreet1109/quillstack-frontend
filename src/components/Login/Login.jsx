@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -27,16 +27,19 @@ const Login = () => {
     setSuccess("");
 
     try {
-      const response = await fetch("https://quillstack-backend.onrender.com/api/auth/userlogin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://quillstack-backend.onrender.com/api/auth/userlogin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: credentials.email,
+            password: credentials.password,
+          }),
         },
-        body: JSON.stringify({
-          email: credentials.email,
-          password: credentials.password,
-        }),
-      });
+      );
 
       const json = await response.json();
 
@@ -52,6 +55,7 @@ const Login = () => {
     } catch (err) {
       setError("Something went wrong. Try again later.");
     }
+    props.showAlert("Login successful!", "success");
   };
 
   return (
